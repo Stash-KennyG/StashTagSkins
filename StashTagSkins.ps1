@@ -110,7 +110,7 @@ $AnswerTrue = New-Object System.Management.Automation.Host.ChoiceDescription '&Y
 $AnswerFalse = New-Object System.Management.Automation.Host.ChoiceDescription '&No', "Skips tags that aren't yet in the database."
 $options = [System.Management.Automation.Host.ChoiceDescription[]]($AnswerTrue, $AnswerFalse)
 $title = 'Create new tags'
-$message = "Should we create new tags that aren't already present?"
+$message = "Do you want to create new tags that aren't already present?"
 $result = $host.ui.PromptForChoice($title, $message, $options, 1)
 if ($result -eq 0) {
     $createNewTags = $True
@@ -249,7 +249,8 @@ foreach ($tag in $results.data.findTags.tags)
                 $LoadedTags.Add($candidateTag) | Out-Null
             } 
             else {
-                write-debug "  Image matched for $($candidateTag.Name)" -ForegroundColor Green
+                write-debug "  Image matched for $($candidateTag.Name) - nothing to do"
+                $LoadedTags.Add($candidateTag) | Out-Null
             }
         }
     }
