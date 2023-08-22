@@ -1,6 +1,9 @@
 # StashTagSkins
 Used to quickly apply and change themes of tags for [Stash](https://github.com/stashapp/stash).
 
+## WARNING
+While I will try to support this and fix any basic bugs, <font color="red">**I am not responsible if this nukes your database.  TAKE A BACKUP NOW!  TAKE A BACKUP BEFORE YOUR RUN IT EACH TIME!**</font>  The script does NOT delete any tags.  The only potential data loss is in losing your tag images if they are cleared or overwritten, but please exercise good backup practice.  Find me on discord if you have questions, but do not complain about something this did your stash.  It works for me, and I have tried very hard to make it work, but this is best efforts - not commercial product.
+
 ## Prerequisites
 This script requires 
  - [PSGraphQL](https://github.com/anthonyg-1/PSGraphQL) and 
@@ -30,4 +33,4 @@ Upon launch, the script will ask you questions to select appropriate options.  T
 - If you already have a tag image, do you want to overwrite it?
 
 Once you answer these questions, the script will run.
-![Output](/HowToResources/config.png)
+![Output](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Config.png?raw=true)
