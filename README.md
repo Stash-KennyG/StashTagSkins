@@ -13,11 +13,11 @@ By Default, you can use the built-in module manager to get PSGraphQL
 Install-Module -Name PSGraphQL -Repository PSGallery -Scope CurrentUser
 ```
 ## Executing
-Open a powershell terminal and execute the main file
+Open a powershell terminal and execute the main file to connect to a local stash
 ```powershell
 .\StashTagSkins.ps1
 ```
---- Specify an alternative stash
+Or if you'd like you can specify an alternative stash
 ```powershell
 .\StashTagSkins.ps1  -StashAddress "192.168.1.100:9999"
 ```
@@ -30,3 +30,4 @@ Upon launch, the script will ask you questions to select appropriate options.  T
 - If you already have a tag image, do you want to overwrite it?
 
 Once you answer these questions, the script will run.
+![Output](/HowToResources/config.png)
