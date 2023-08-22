@@ -33,4 +33,4 @@ Upon launch, the script will ask you questions to select appropriate options.  T
 - If you already have a tag image, do you want to overwrite it?
 
 Once you answer these questions, the script will run.
-![Output](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Config.png?raw=true)
+![Output](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Sample.png?raw=true)
