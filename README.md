@@ -34,3 +34,8 @@ Upon launch, the script will ask you questions to select appropriate options.  T
 
 Once you answer these questions, the script will run.
 ![Output](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Sample.png?raw=true)
+
+### Extending The Library
+The library works on a the same JSON export as stash.  All you need to do is submit a PR with your JSON files from the zip created upon export from the tagger.
+![Export1](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Export_Menu.png?raw=true)![Export2](https://github.com/Stash-KennyG/StashTagSkins/blob/main/HowToResources/Export_Settings.png?raw=true)
+Extract the zip file into a new subfolder in the Library directory named for your tag image collection.  DM me on Discord and I can merge it into the main.
