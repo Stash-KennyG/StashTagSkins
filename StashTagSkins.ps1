@@ -253,6 +253,9 @@ foreach ($tag in $results.data.findTags.tags)
                 $LoadedTags.Add($candidateTag) | Out-Null
             }
         }
+        else{
+            $LoadedTags.Add($candidateTag) | Out-Null
+        }
     }
     else {
         #Do we wish to clear old images?
