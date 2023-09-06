@@ -65,6 +65,7 @@ if (!(test-path "$LibraryRoot"))
     {
         Write-Host "Please provide the path to the Library Folder"
         Write-Host " ex: c:\StashTagSkins\Library"
+        Write-Host " on nix: ~/StashTagSkins/Library"
         $LibraryRoot = Read-Host
         if (!(Test-Path $LibraryRoot))
         {
