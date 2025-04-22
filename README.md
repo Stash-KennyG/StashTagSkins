@@ -4,6 +4,8 @@ Used to quickly apply and change themes of tags for [Stash](https://github.com/s
 ## WARNING
 While I will try to support this and fix any basic bugs, <font color="red">**I am not responsible if this nukes your database.  TAKE A BACKUP NOW!  TAKE A BACKUP BEFORE YOUR RUN IT EACH TIME!**</font>  The script does NOT delete any tags.  The only potential data loss is in losing your tag images if they are cleared or overwritten, but please exercise good backup practice.  Find me on discord if you have questions, but do not complain about something this did your stash.  It works for me, and I have tried very hard to make it work, but this is best efforts - not commercial product.
 
+**Note:** Disable authentication on stash to run the script.  This is the number one issue people have reported with this on Discord.  The current version does not do authentication. 
+
 ## Prerequisites
 This script requires 
  - [PSGraphQL](https://github.com/anthonyg-1/PSGraphQL) and 
