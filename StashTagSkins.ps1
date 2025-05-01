@@ -216,14 +216,25 @@ foreach ($tag in $results.data.findTags.tags)
         }
         if ($updateImage)
         {
-            Write-Debug "Checking NEW: $($candidateTag.Name) vs Existing: $($tag.Name)"
-            #Get Existing Image and convert it to base 64
-            $image = Invoke-WebRequest -Uri $tag.image_path -Method Get
-            $image64 = [convert]::ToBase64String(($image.Content))
+            $imagesAreEqual = $false
+            try { 
+                Write-Debug "Checking NEW: $($candidateTag.Name) vs Existing: $($tag.Name)"
+                #Get Existing Image and convert it to base 64
+                $image = Invoke-WebRequest -Uri $tag.image_path -Method Get
+                # Ensure the content is properly encoded in UTF-8
+                #$svgBytes = [System.Text.Encoding]::UTF8.GetBytes($svgContent)
+                # Convert the byte array to a base64 string
+                #$base64String = [System.Convert]::ToBase64String($svgBytes)
+                $image64 = [convert]::ToBase64String(($image.Content))
+                $imagesAreEqual = ($candidateTag.image -eq $image64)
+            }
+            catch {
+                Write-Debug "An error while checking existing image, will assume images are not equal: $_"
+            }
+            
 
             #See if they are the same
-            if (!($candidateTag.image -eq $image64) -and
-                $overwriteImages)
+            if (!$imagesAreEqual -and $overwriteImages)
             {
                 Write-Debug "Updating..."
                 $mutation = 'mutation ($id: ID!, $image: String) {
